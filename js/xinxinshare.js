@@ -1,27 +1,23 @@
 jQuery(document).ready(function() {
-	if ( $("div.bdsharebuttonbox").length > 0 || $("a.bdshare-slide-button").length > 0) {
-		alert(  $("div.bdsharebuttonbox") );	
-	} else {	
-		alert("没有百度分享！");	
-		
-		var divBaiduShareButton = '<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>';
-		
-		$( "body" ) .append(divBaiduShareButton);
-		window._bd_share_config = {
-			"common":{
-				"bdSnsKey":{},
-				"bdText":"",
-				"bdMini":"2",
-				"bdPic":"",
-				"bdStyle":"0",
-				"bdSize":"16"
-			},
-			"share":{}
-		};
-		with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];		
-	}
+    if ( $("div.bdsharebuttonbox").length > 0 || $("a.bdshare-slide-button").length > 0) {
+        return;
+    } 
+        
+    var divBaiduShareButton = '<div style="width: 40px;position: fixed;z-index: 999;  left: 5px;bottom: 69px;opacity: 1;"><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>  </div>';
+    
+    $( "body" ) .append(divBaiduShareButton);
+    
+    window._bd_share_config = {
+        "common":{
+            "bdSnsKey":{},
+            "bdText":"",
+            "bdMini":"2",
+            "bdPic":"",
+            "bdStyle":"0",
+            "bdSize":"16"
+        },
+        "share":{}
+    };
+    
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 });
-
-
-
-
